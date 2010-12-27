@@ -29,3 +29,11 @@ THRASHING_TIMEOUT = getattr(settings, 'ODASH_THRASHING_TIMEOUT', 60)
 THRASHING_LIMIT = getattr(settings, 'ODASH_THRASHING_LIMIT', 10)
 
 KEY = getattr(settings, 'ODASH_KEY', md5_constructor(settings.SECRET_KEY).hexdigest())
+
+# Extending this allow you to ignore module prefixes when we attempt to
+# discover which function an error comes from (typically a view)
+EXCLUDE_PATHS = getattr(settings, 'ODASH_EXCLUDE_PATHS', [])
+
+# By default Sentry only looks at modules in INSTALLED_APPS for drilling down
+# where an exception is located
+INCLUDE_PATHS = getattr(settings, 'ODASH_INCLUDE_PATHS', [])
