@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='odash-client',
-    version='0.1.0',
+    version='0.1.1',
     description='Client for general dashboard to collect information from all services, run web tests to different services and get report.',
     long_description=open('README.rst').read(),
     # Get more strings from http://www.python.org/pypi?:action=list_classifiers
